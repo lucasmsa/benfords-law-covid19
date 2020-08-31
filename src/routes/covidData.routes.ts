@@ -1,13 +1,13 @@
 import { Router } from 'express'
-import CovidDeathsService from '../services/CovidDeathsService'
+import CovidWorldDataService from '../services/CovidWorldDataService'
 
-const covidDeathsService = new CovidDeathsService()
+const covidWorldDataService = new CovidWorldDataService()
 
 const covidDataRoutes = Router()
 
 covidDataRoutes.get('/all', async (req, res) => {
 
-  const covidDataResponse = await covidDeathsService.run()
+  const covidDataResponse = await covidWorldDataService.run()
 
   console.log(covidDataResponse)
 
