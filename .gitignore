@@ -5,4 +5,5 @@ build/
 tmp/*
 temp/
 .env
+.DS_Store
 !tmp/.gitkeep
