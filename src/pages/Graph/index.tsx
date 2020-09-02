@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useEffect, useMemo } from 'react'
 import { Container, GraphContainer, PlaceContainer , ButtonsContainer } from './styles'
 import api from '../../services/api'
@@ -54,11 +55,7 @@ const Graph: React.FC = (props) => {
   const place = dataToSearch.split('/')[2]
 
   const [responseData, setResponseData] = useState<Response>()
-
-  const [deathsPercentage, setDeathsPercentage] = useState<DataPercentage>({})
-  const [casesPercentage, setCasesPercentage] = useState<DataPercentage>({})
   const [selector, setSelector] = useState<'deaths' | 'cases'>('cases')
-  const [windowWidth, setWindowWidth] = useState({ windowWidth: window.innerWidth})
 
   useEffect(() => {
     async function loadDataWorld(): Promise<void> {
