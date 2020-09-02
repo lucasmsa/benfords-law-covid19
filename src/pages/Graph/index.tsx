@@ -11,7 +11,7 @@ import Globe from '../../assets/geography.png'
 import BrazilDataImg from '../../assets/brazil-data.png'
 
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label
 } from 'recharts';
 
 
@@ -149,8 +149,8 @@ const Graph: React.FC = (props) => {
           
           <LineChart
             data={dataToGraph}
-            width={600}
-            height={500}
+            width={500}
+            height={350}
             style={{background: 'none'}}
             margin={{
               top: 5, right: 30, left: 20, bottom: 5,
@@ -158,8 +158,8 @@ const Graph: React.FC = (props) => {
           >
 
             <CartesianGrid stroke='#000' fill='#a5bbad'/>
-            <XAxis dataKey="name"  stroke='#000'  />
-            <YAxis stroke='#000'/>
+            <XAxis dataKey="name"  stroke='#000'/>
+            <YAxis stroke='#000' label={{ value: '1st digit ocurrences (%)', angle: -90, position: 'insideLeft', fontSize: '12'}}/>
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="Belfords_law" stroke='#893' strokeDasharray="6" strokeWidth='6px'/>

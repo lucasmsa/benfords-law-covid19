@@ -19,16 +19,12 @@ export const Container = styled.div`
   align-content: center;
   align-items: center;
   padding: 32px;
-  margin: 80px;
+  margin: 40px;
+  height: 800px;
   animation: ${appearFromRight} 1s;
   @media only screen and (max-width: 1000px){
     margin-left: 64px;
     margin-right: 64px;
-  }
-
-  @media only screen and (max-width: 592px){
-    margin-left: 2px;
-    margin-right: 20px;
   }
 `
 
@@ -38,8 +34,8 @@ export const ImageVirus = styled.img`
   margin-top: 10px;
   margin-left: 20px;
   @media only screen and (max-width: 680px){
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
   }
 `
 
@@ -54,14 +50,14 @@ export const Header = styled.h1`
   text-align: center;
   color: #FFFFFF;
 
-  @media only screen and (max-width: 492px){
-    font-size: 45px;
+  @media only screen and (max-width: 680px){
+    font-size: 40px;
     line-height: 50px;
   }
 `
 
 export const Line = styled.div`
-  margin-top: 10px;
+  margin-top: 15px;
   height: 10px;
   width: 650px;
   background: #000;
@@ -69,11 +65,9 @@ export const Line = styled.div`
   border-radius: 35%;
 
   @media only screen and (max-width: 680px){
-    width: 460px;
-  }
-
-  @media only screen and (max-width: 492px){
-    width: 400px;
+    margin-top: -5px;
+    width: 360px;
+    height: 5px;
   }
 `
 
@@ -109,11 +103,9 @@ export const Explanation = styled.h1`
   font-family: 'Noto Sans KR', sans-serif;  
   width: 650px;
   font-size: 24px;
-  @media only screen and (max-width: 1000px){
-    width: 400px;
-  }
-  @media only screen and (max-width: 592px){
-    font-size: 24px;
+  @media only screen and (max-width: 680px){
+    width: 300px;
+    font-size: 18px;
   }
   text-align: center;
   font-weight: 500;
