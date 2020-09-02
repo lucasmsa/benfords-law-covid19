@@ -13,8 +13,13 @@ const appearFromRight = keyframes`
 `
 
 export const Container = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
   padding: 32px;
-  margin: 64px 300px;
+  margin: 80px;
   animation: ${appearFromRight} 1s;
   @media only screen and (max-width: 1000px){
     margin-left: 64px;
@@ -48,19 +53,26 @@ export const Header = styled.h1`
   line-height: 70px;
   text-align: center;
   color: #FFFFFF;
+
+  @media only screen and (max-width: 492px){
+    font-size: 45px;
+    line-height: 50px;
+  }
 `
 
 export const Line = styled.div`
   margin-top: 10px;
-  display: flex;
-  flex: 1;
   height: 10px;
   width: 650px;
   background: #000;
   color:  aliceblue;
   border-radius: 35%;
 
-  @media only screen and (max-width: 1000px){
+  @media only screen and (max-width: 680px){
+    width: 460px;
+  }
+
+  @media only screen and (max-width: 492px){
     width: 400px;
   }
 `
