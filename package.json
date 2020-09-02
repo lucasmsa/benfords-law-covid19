@@ -17,6 +17,7 @@
     "@types/styled-components": "^5.1.2",
     "axios": "^0.20.0",
     "polished": "^3.6.6",
+    "re-resizable": "^6.5.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

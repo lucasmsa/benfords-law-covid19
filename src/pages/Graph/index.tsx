@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import { Container, GraphContainer } from './styles'
+import { Container, GraphContainer, PlaceContainer , ButtonsContainer } from './styles'
 import api from '../../services/api'
 import belfordsLawNumbers from '../../utils/belfordsLawNumbers'
 import getNumberOcurrences  from '../../utils/extractNumbeOcurrences'
+import { Link } from 'react-router-dom'
+import GoBackIcon from '../../assets/left-arrow.png'
+import Button from '../../components/Button'
+import Globe from '../../assets/geography.png'
+import BrazilDataImg from '../../assets/brazil-data.png'
 
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -53,6 +58,7 @@ const Graph: React.FC = (props) => {
   const [deathsPercentage, setDeathsPercentage] = useState<DataPercentage>({})
   const [casesPercentage, setCasesPercentage] = useState<DataPercentage>({})
   const [selector, setSelector] = useState<'deaths' | 'cases'>('cases')
+  const [windowWidth, setWindowWidth] = useState({ windowWidth: window.innerWidth})
 
   useEffect(() => {
     async function loadDataWorld(): Promise<void> {
@@ -70,7 +76,6 @@ const Graph: React.FC = (props) => {
     place === 'world' && loadDataWorld()
     place === 'brazil' && loadDataBrazil()
   }, [place])
-
 
   const totalCasesData = useMemo(() => {
     const totalCases: number[] = []
@@ -119,7 +124,6 @@ const Graph: React.FC = (props) => {
 
     for (var number = 1; number < 10; number++){
       let number_str = number.toString()
-      console.log(belfordsLawNumbers)
 
       data.push({
         name: number_str,
@@ -136,33 +140,45 @@ const Graph: React.FC = (props) => {
 
   return (
     <Container>
-      {totalCasesData.length && <h1>{totalCasesData}</h1>}
-      {totalDeathsData.length && <h1>{totalDeathsData}</h1>}
-      <GraphContainer>
-       {dataToGraph && (
-
-        <LineChart
-          width={700}
-          height={600}
-          data={dataToGraph}
+      <Link to='/'>
+          <img src={GoBackIcon} alt="Go Back button"/>
+          <img src={place === 'world' ? Globe : BrazilDataImg} alt='place symbol'/>
+      </Link>
+      <PlaceContainer>
+       
+      </PlaceContainer>
+        <GraphContainer>
+        {dataToGraph && (
           
-          style={{background: 'none'}}
-          margin={{
-            top: 5, right: 30, left: 20, bottom: 5,
-          }}
-        >
+          <LineChart
+            data={dataToGraph}
+            width={600}
+            height={500}
+            style={{background: 'none'}}
+            margin={{
+              top: 5, right: 30, left: 20, bottom: 5,
+            }}
+          >
 
-          <CartesianGrid stroke='#000' fill='#a5bbad'/>
-          <XAxis dataKey="name"  stroke='#000'  />
-          <YAxis stroke='#000'/>
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="Belfords_law" stroke='#893' strokeDasharray="6" strokeWidth='6px'/>
-          <Line type="natural" dataKey="Covid_cases" stroke="#5e2a41" strokeWidth='6px' />
-        </LineChart>  
-      
-       )}
-      </GraphContainer>
+            <CartesianGrid stroke='#000' fill='#a5bbad'/>
+            <XAxis dataKey="name"  stroke='#000'  />
+            <YAxis stroke='#000'/>
+            <Tooltip />
+            <Legend />
+            <Line type="monotone" dataKey="Belfords_law" stroke='#893' strokeDasharray="6" strokeWidth='6px'/>
+            <Line type="monotone" dataKey={selector === 'cases' ? "Covid_cases" : "Covid_deaths"} stroke="#5e2a41" strokeWidth='6px' />
+          </LineChart>  
+        
+        )}
+        </GraphContainer>
+        <ButtonsContainer>
+          <span onClick={() => setSelector('cases')}>
+            <Button>Cases 🦠</Button>
+          </span>
+          <span onClick={() => setSelector('deaths')}>
+            <Button>Deaths 💀</Button>
+          </span>
+        </ButtonsContainer>
     </Container>
   )
 }

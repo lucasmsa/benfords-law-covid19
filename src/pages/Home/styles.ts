@@ -94,7 +94,6 @@ export const ButtonsContainer = styled.div`
 
     &:hover {
       background: ${shade(0.2, '#a5bbad')}
-
     }
 
     img {

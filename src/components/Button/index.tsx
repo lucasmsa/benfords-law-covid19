@@ -5,7 +5,9 @@ const Button: React.FC = ({children, ...rest}) => {
   return (
     <Container
         type='button'
-  >{children}</Container>
+        {...rest}>
+      {children}
+    </Container>
   )
 } 
 
