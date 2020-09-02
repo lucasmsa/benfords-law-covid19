@@ -48,6 +48,7 @@ const Graph: React.FC = (props) => {
     place === 'brazil' && loadDataBrazil()
   }, [place])
 
+  
   const totalCasesData = useMemo(() => {
     const totalCases: number[] = []
     
@@ -66,9 +67,10 @@ const Graph: React.FC = (props) => {
     return totalCases
   }, [responseData, place])
 
+
   const totalDeathsData = useMemo(() => {
     const totalDeaths: number[] = []
- 
+
     if (place === 'world' && responseData?.Countries){
       responseData.Countries.forEach((country) => {
         country.TotalDeaths &&
@@ -80,11 +82,11 @@ const Graph: React.FC = (props) => {
           totalDeaths.push(Number(state.deaths.toString()[0]))
       })
     }
-    
+
     return totalDeaths
   }, [responseData, place])
 
-  
+
   return (
     <Container>
       {totalCasesData.length && <h1>{totalCasesData}</h1>}
