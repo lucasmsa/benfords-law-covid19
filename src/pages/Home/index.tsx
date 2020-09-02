@@ -4,6 +4,7 @@ import VirusImage from '../../assets/virus_corona_coronavirus_icon_140419.png'
 import BrazilIcon from '../../assets/brazil.svg'
 import GlobeIcon from '../../assets/globe.svg'
 import Button from '../../components/Button'
+import { Link } from 'react-router-dom'
 
 const Home: React.FC = () => {
   return (
@@ -21,8 +22,12 @@ const Home: React.FC = () => {
         So, does this pattern shows up in Coronavirus cases?
       </Explanation> 
       <ButtonsContainer>
-        <Button>World <img src={GlobeIcon} alt="Globe"/></Button>
-        <Button>Brazil <img src={BrazilIcon} alt="Brazil"/></Button>
+        <Link to='/data/world'>
+          <Button>World <img src={GlobeIcon} alt="Globe"/></Button>
+        </Link>
+        <Link to='/data/brazil'>
+          <Button>Brazil <img src={BrazilIcon} alt="Brazil"/></Button>
+        </Link>
       </ButtonsContainer>
     
     </Container>

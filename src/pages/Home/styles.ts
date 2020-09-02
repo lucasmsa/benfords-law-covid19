@@ -1,9 +1,21 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { shade } from 'polished'
+
+const appearFromRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
 
 export const Container = styled.div`
   padding: 32px;
-  margin: 64px 128px;
+  margin: 64px 300px;
+  animation: ${appearFromRight} 1s;
   @media only screen and (max-width: 1000px){
     margin-left: 64px;
     margin-right: 64px;
@@ -39,7 +51,7 @@ export const Header = styled.h1`
 `
 
 export const Line = styled.div`
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex: 1;
   height: 10px;
@@ -85,6 +97,7 @@ export const ButtonsContainer = styled.div`
 export const Explanation = styled.h1`
   font-family: 'Noto Sans KR', sans-serif;  
   width: 650px;
+  font-size: 24px;
   @media only screen and (max-width: 1000px){
     width: 400px;
   }

@@ -6,7 +6,8 @@ import Graph from '../pages/Graph'
 const Routes: React.FC = () => (
   <Switch>
     <Route path='/' exact component={Home} />
-    <Route path='/graph' exact component={Graph} />
+    <Route path='/data/brazil' exact component={Graph} />
+    <Route path='/data/world' exact component={Graph} />
   </Switch>
 )
 

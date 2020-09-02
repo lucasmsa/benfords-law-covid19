@@ -13,4 +13,5 @@ export const Container = styled.button`
   border-radius: 10px;
   font-weight: 500;
   margin-top: 20px;
+  cursor: pointer;
 ` 
