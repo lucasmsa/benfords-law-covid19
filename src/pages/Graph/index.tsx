@@ -11,7 +11,7 @@ import Globe from '../../assets/geography.png'
 import BrazilDataImg from '../../assets/brazil-data.png'
 
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend
 } from 'recharts';
 
 
