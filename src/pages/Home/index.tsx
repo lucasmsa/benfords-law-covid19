@@ -40,7 +40,7 @@ const Home: React.FC = () => {
         </Link>
       </ButtonsContainer>
       <IconsContainer>
-        <a href='https://github.com/lucasmsa/book-finder-app'>
+        <a href='https://github.com/lucasmsa/benfords-law-covid19'>
                 <AiFillGithub
                   size={35}
                   color={'#d0d9dc'}
