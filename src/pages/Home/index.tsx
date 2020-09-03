@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       <Explanation>
         Belford's law refers to a pattern observed in statiscal data
         in which the the distribution of the first digit is not homogeneous 
-        as it's supposed to be, actualily following a pattern where the number 1 
+        as it's supposed to be, actually following a pattern where the number 1 
         shows up in ~30% of the time, 2 in 17.6%... <br /><br />
         So, does this pattern shows up in Coronavirus cases?
       </Explanation> 

@@ -29,13 +29,14 @@ export const Container = styled.div`
 `
 
 export const ImageVirus = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin-top: 10px;
   margin-left: 20px;
+
   @media only screen and (max-width: 680px){
-    height: 100px;
-    width: 100px;
+    width: 120px;
+    height: 120px;
   }
 `
 
@@ -45,7 +46,7 @@ export const Header = styled.h1`
   font-family: 'Noto Sans KR', sans-serif;  
   font-style: normal;
   font-weight: 800;
-  font-size: 60px;
+  font-size: 58px;
   line-height: 70px;
   text-align: center;
   color: #FFFFFF;
@@ -57,7 +58,7 @@ export const Header = styled.h1`
 `
 
 export const Line = styled.div`
-  margin-top: 15px;
+
   height: 10px;
   width: 650px;
   background: #000;
@@ -102,7 +103,7 @@ export const ButtonsContainer = styled.div`
 export const Explanation = styled.h1`
   font-family: 'Noto Sans KR', sans-serif;  
   width: 650px;
-  font-size: 24px;
+  font-size: 22px;
   @media only screen and (max-width: 680px){
     width: 300px;
     font-size: 18px;

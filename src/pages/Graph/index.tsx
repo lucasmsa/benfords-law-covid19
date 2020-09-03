@@ -9,7 +9,7 @@ import GoBackIcon from '../../assets/left-arrow.png'
 import Button from '../../components/Button'
 import Globe from '../../assets/geography.png'
 import BrazilDataImg from '../../assets/brazil-data.png'
-
+import useWindowSize from '../../hooks/getWindowsSize'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend
 } from 'recharts';
@@ -53,6 +53,7 @@ const Graph: React.FC = (props) => {
   const propsRoute = props as RouteParams
   const dataToSearch = propsRoute.match.path
   const place = dataToSearch.split('/')[2]
+  const windowSize = useWindowSize()
 
   const [responseData, setResponseData] = useState<Response>()
   const [selector, setSelector] = useState<'deaths' | 'cases'>('cases')
@@ -116,6 +117,14 @@ const Graph: React.FC = (props) => {
   }, [responseData, place])
 
 
+  const windowWidth = useMemo<number>(() => {
+    if (windowSize.width){
+      return windowSize.width
+    } 
+
+    return 1000
+  }, [windowSize.width])
+
   const dataToGraph = useMemo(() => {
     const data: DataGraphInterface[] = [{ name: '' }]
 
@@ -131,35 +140,33 @@ const Graph: React.FC = (props) => {
     }
 
     data.push({ name: '' })
-    console.log(data)
+    console.log(windowSize)
     return data
   }, [totalCasesData, totalDeathsData])
 
   return (
     <Container>
       <Link to='/'>
+        
           <img src={GoBackIcon} alt="Go Back button"/>
           <img src={place === 'world' ? Globe : BrazilDataImg} alt='place symbol'/>
       </Link>
-      <PlaceContainer>
-       
-      </PlaceContainer>
         <GraphContainer>
         {dataToGraph && (
           
           <LineChart
             data={dataToGraph}
-            width={500}
-            height={350}
+            width={(windowWidth >= 650) ? 600 : 440}
+            height={(windowWidth >= 650) ? 400 : 300}
             style={{background: 'none'}}
             margin={{
               top: 5, right: 30, left: 20, bottom: 5,
             }}
           >
-
+            
             <CartesianGrid stroke='#000' fill='#a5bbad'/>
             <XAxis dataKey="name"  stroke='#000'/>
-            <YAxis stroke='#000' label={{ value: '1st digit ocurrences (%)', angle: -90, position: 'insideLeft', fontSize: '12'}}/>
+            <YAxis stroke='#000' label={{ value: '1st digit ocurrences (%)', angle: -90, position: 'insideLeft', fontSize: '11'}}/>
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="Belfords_law" stroke='#893' strokeDasharray="6" strokeWidth='6px'/>

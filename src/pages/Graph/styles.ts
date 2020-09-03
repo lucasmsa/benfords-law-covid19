@@ -23,14 +23,21 @@ export const Container = styled.div`
   height: 1000px;
   a {
     img:nth-child(1) {
-      margin: 50px 150px 50px -60px;
       width: 50px;
+      margin: 50px 180px 30px 0;
+      @media only screen and (max-width: 650px){
+        width: 35px;
+        margin: 50px 150px 20px -60px;
+      }
     }
     img:nth-child(2) {
-      margin-left: -45px;
-      margin-right: 50px;
-      margin-bottom: 10px;
       width: 75px;
+      margin-right: 186px;
+      margin-bottom: 10px;
+      @media only screen and (max-width: 650px){
+        width: 55px;
+        margin: 0 50px 10px -30px;
+      }
     }
   }
 `
@@ -45,11 +52,6 @@ export const PlaceContainer = styled.div`
 export const GraphContainer = styled.div`
   font-family: 'Noto Sans KR', sans-serif; 
   color: #fff0e1; 
-`
-
-export const LineChartStyled = styled(LineChart)`
-  width: 400px;
-  height: 300px;
 `
 
 export const ButtonsContainer = styled.div`
