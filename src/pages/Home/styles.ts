@@ -117,7 +117,7 @@ export const Explanation = styled.h1`
 export const IconsContainer = styled.div`
   flex-direction: row;
   color: #d0d9dc;
-  margin-top: 30px;
+  margin-top: 20px;
 
   a:nth-child(1) {
     margin-right: 5px;

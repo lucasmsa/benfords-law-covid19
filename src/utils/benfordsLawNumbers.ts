@@ -2,7 +2,7 @@ interface PercentageData {
   [key: string]: number;
 }
 
-const belfordsLawNumbers: PercentageData = {
+const benfordsLawNumbers: PercentageData = {
   '1': 30.1,  
   '2': 17.6,
   '3': 12.5,
@@ -14,4 +14,4 @@ const belfordsLawNumbers: PercentageData = {
   '9': 4.6
 }
 
-export default belfordsLawNumbers
+export default benfordsLawNumbers

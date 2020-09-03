@@ -20,12 +20,12 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Header>
-        Belford's Law<br /> Covid-19
+        Benford's Law<br /> Covid-19
         <ImageVirus src={VirusImage} alt='Virus' />
       </Header> 
       <Line />
       <Explanation>
-        Belford's law refers to a pattern observed in statiscal data
+        Benford's law refers to a pattern observed in statiscal data
         in which the the distribution of the first digit is not homogeneous 
         as it's supposed to be, actually following a pattern where the number 1 
         shows up in ~30% of the time, 2 in 17.6%... <br /><br />

@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Container, GraphContainer, ButtonsContainer, ButtonStyled } from './styles'
 import api from '../../services/api'
-import belfordsLawNumbers from '../../utils/belfordsLawNumbers'
+import benfordsLawNumbers from '../../utils/benfordsLawNumbers'
 import getNumberOcurrences  from '../../utils/extractNumbeOcurrences'
 import { Link } from 'react-router-dom'
 import GoBackIcon from '../../assets/left-arrow.png'
@@ -41,7 +41,7 @@ interface DataPercentage {
 
 interface DataGraphInterface {
   name: string;
-  Belfords_law?: number;
+  Benfords_law?: number;
   Covid_cases?: number;
   Covid_deaths?: number;
 }
@@ -132,7 +132,7 @@ const Graph: React.FC = (props) => {
 
       data.push({
         name: number_str,
-        Belfords_law: belfordsLawNumbers[number_str],
+        Benfords_law: benfordsLawNumbers[number_str],
         Covid_cases: totalCasesData[number_str],
         Covid_deaths: totalDeathsData[number_str]
       })
@@ -167,7 +167,7 @@ const Graph: React.FC = (props) => {
             <YAxis stroke='#000' label={{ value: '1st digit ocurrences (%)', angle: -90, position: 'insideLeft', fontSize: '11'}}/>
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="Belfords_law" stroke='#37515a' strokeDasharray="6" strokeWidth='6px'/>
+            <Line type="monotone" dataKey="Benfords_law" stroke='#37515a' strokeDasharray="6" strokeWidth='6px'/>
             <Line type="monotone" dataKey={selector === 'cases' ? "Covid_cases" : "Covid_deaths"} stroke="#5e2a41" strokeWidth='6px' />
           </LineChart>  
         
