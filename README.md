@@ -26,5 +26,5 @@
 
 ## Result 🎨
 <p align="center">
-    <img width='28%' src="https://i.imgur.com/YAIF0LU.png">
+    <img width='40%' src="https://i.imgur.com/YAIF0LU.png">
 </p>
