@@ -29,8 +29,8 @@ export const Container = styled.div`
 `
 
 export const ImageVirus = styled.img`
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
   margin-top: 10px;
   margin-left: 20px;
 
@@ -46,7 +46,7 @@ export const Header = styled.h1`
   font-family: 'Noto Sans KR', sans-serif;  
   font-style: normal;
   font-weight: 800;
-  font-size: 58px;
+  font-size: 62px;
   line-height: 70px;
   text-align: center;
   color: #FFFFFF;

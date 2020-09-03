@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components'
 import { shade} from 'polished'
-import { LineChart } from 'recharts'
 
 const appearFromRight = keyframes`
   from {

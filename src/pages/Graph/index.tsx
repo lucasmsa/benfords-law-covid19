@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useEffect, useMemo } from 'react'
-import { Container, GraphContainer, PlaceContainer , ButtonsContainer } from './styles'
+import { Container, GraphContainer, ButtonsContainer } from './styles'
 import api from '../../services/api'
 import belfordsLawNumbers from '../../utils/belfordsLawNumbers'
 import getNumberOcurrences  from '../../utils/extractNumbeOcurrences'
@@ -140,7 +140,6 @@ const Graph: React.FC = (props) => {
     }
 
     data.push({ name: '' })
-    console.log(windowSize)
     return data
   }, [totalCasesData, totalDeathsData])
 
@@ -169,7 +168,7 @@ const Graph: React.FC = (props) => {
             <YAxis stroke='#000' label={{ value: '1st digit ocurrences (%)', angle: -90, position: 'insideLeft', fontSize: '11'}}/>
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="Belfords_law" stroke='#893' strokeDasharray="6" strokeWidth='6px'/>
+            <Line type="monotone" dataKey="Belfords_law" stroke='#37515a' strokeDasharray="6" strokeWidth='6px'/>
             <Line type="monotone" dataKey={selector === 'cases' ? "Covid_cases" : "Covid_deaths"} stroke="#5e2a41" strokeWidth='6px' />
           </LineChart>  
         
