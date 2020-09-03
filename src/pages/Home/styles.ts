@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { shade, tint } from 'polished'
+import { shade } from 'polished'
 
 const appearFromRight = keyframes`
   from {
