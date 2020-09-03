@@ -67,6 +67,13 @@ export const ButtonsContainer = styled.div`
       &:hover {
         background: ${shade(0.2, '#a5bbad')}
       }
+
+      @media only screen and (max-width: 650px){
+        max-width: 96px;
+        max-height: 56px;
+        font-size: 12px;
+        margin: 21px 3.5px;
+      }
     }
   }
 `
