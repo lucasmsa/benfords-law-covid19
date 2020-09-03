@@ -154,8 +154,8 @@ const Graph: React.FC = (props) => {
           
           <LineChart
             data={dataToGraph}
-            width={(windowWidth >= 650) ? 600 : 440}
-            height={(windowWidth >= 650) ? 400 : 300}
+            width={(windowWidth >= 650) ? 600 : 420}
+            height={(windowWidth >= 650) ? 400 : 296}
             style={{background: 'none'}}
             margin={{
               top: 5, right: 30, left: 20, bottom: 5,
