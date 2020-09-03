@@ -46,7 +46,7 @@ const Home: React.FC = () => {
                   color={'#d0d9dc'}
             />
         </a>
-        <a href='https://pt.wikipedia.org/wiki/Lei_de_Benford'>
+        <a href='https://en.wikipedia.org/wiki/Benford%27s_law'>
               <FcWikipedia  
                   size={35}
                   color={'#d0d9dc'}
