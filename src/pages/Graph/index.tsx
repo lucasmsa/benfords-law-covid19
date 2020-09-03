@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useEffect, useMemo } from 'react'
-import { Container, GraphContainer, ButtonsContainer } from './styles'
+import { Container, GraphContainer, ButtonsContainer, ButtonStyled } from './styles'
 import api from '../../services/api'
 import belfordsLawNumbers from '../../utils/belfordsLawNumbers'
 import getNumberOcurrences  from '../../utils/extractNumbeOcurrences'
 import { Link } from 'react-router-dom'
 import GoBackIcon from '../../assets/left-arrow.png'
-import Button from '../../components/Button'
 import Globe from '../../assets/geography.png'
 import BrazilDataImg from '../../assets/brazil-data.png'
 import useWindowSize from '../../hooks/getWindowsSize'
@@ -176,10 +175,10 @@ const Graph: React.FC = (props) => {
         </GraphContainer>
         <ButtonsContainer>
           <span onClick={() => setSelector('cases')}>
-            <Button>Cases 🦠</Button>
+            <ButtonStyled selected={(selector === 'cases' && true)}>Cases 🦠</ButtonStyled>
           </span>
           <span onClick={() => setSelector('deaths')}>
-            <Button>Deaths 💀</Button>
+            <ButtonStyled selected={(selector === 'deaths' && true)}>Deaths 💀</ButtonStyled>
           </span>
         </ButtonsContainer>
     </Container>

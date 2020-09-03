@@ -1,5 +1,10 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
+import Button from '../../components/Button'
 import { shade} from 'polished'
+
+interface ButtonProps {
+  selected?: boolean;
+}
 
 const appearFromRight = keyframes`
   from {
@@ -57,23 +62,26 @@ export const ButtonsContainer = styled.div`
   flex-direction: row;
   margin-top: 20px;
   margin-left: 50px;
-  span {
-    button {
-      max-width: 120px;
-      max-height: 70px;
-      font-size: 14.5px;
-      margin: 30px 5px;
-      transition: background-color 0.2s;
-      &:hover {
-        background: ${shade(0.2, '#a5bbad')}
-      }
+`
 
-      @media only screen and (max-width: 650px){
-        max-width: 96px;
-        max-height: 56px;
-        font-size: 12px;
-        margin: 21px 3.5px;
-      }
-    }
+export const ButtonStyled = styled(Button)<ButtonProps>`
+  max-width: 120px;
+  max-height: 70px;
+  font-size: 14.5px;
+  margin: 30px 5px;
+  transition: background-color 0.2s;
+  &:hover {
+    background: ${shade(0.2, '#a5bbad')}
   }
+
+  @media only screen and (max-width: 650px){
+    max-width: 96px;
+    max-height: 56px;
+    font-size: 12px;
+    margin: 21px 3.5px;
+  }
+
+  ${props => props.selected && css`
+      border-color: #361925;
+  `}
 `
