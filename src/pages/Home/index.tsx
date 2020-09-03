@@ -1,9 +1,19 @@
 import React from 'react'
-import {Container, Header, ImageVirus, Line, ButtonsContainer,Explanation} from './styles'
+import {
+  Container, 
+  Header, 
+  ImageVirus, 
+  Line, 
+  ButtonsContainer,
+  Explanation,
+  IconsContainer
+} from './styles'
 import VirusImage from '../../assets/virus_corona_coronavirus_icon_140419.png'
 import BrazilIcon from '../../assets/brazil.svg'
 import GlobeIcon from '../../assets/globe.svg'
 import Button from '../../components/Button'
+import { AiFillGithub } from 'react-icons/ai'
+import { FcWikipedia } from "react-icons/fc";
 import { Link } from 'react-router-dom'
 
 const Home: React.FC = () => {
@@ -29,7 +39,20 @@ const Home: React.FC = () => {
           <Button>Brazil <img src={BrazilIcon} alt="Brazil"/></Button>
         </Link>
       </ButtonsContainer>
-    
+      <IconsContainer>
+        <a href='https://github.com/lucasmsa/book-finder-app'>
+                <AiFillGithub
+                  size={35}
+                  color={'#d0d9dc'}
+            />
+        </a>
+        <a href='https://pt.wikipedia.org/wiki/Lei_de_Benford'>
+              <FcWikipedia  
+                  size={35}
+                  color={'#d0d9dc'}
+            />
+        </a>
+      </IconsContainer>
     </Container>
   )
 }

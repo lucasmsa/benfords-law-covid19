@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { shade } from 'polished'
+import { shade, tint } from 'polished'
 
 const appearFromRight = keyframes`
   from {
@@ -46,7 +46,7 @@ export const Header = styled.h1`
   font-family: 'Noto Sans KR', sans-serif;  
   font-style: normal;
   font-weight: 800;
-  font-size: 62px;
+  font-size: 60px;
   line-height: 70px;
   text-align: center;
   color: #FFFFFF;
@@ -66,9 +66,9 @@ export const Line = styled.div`
   border-radius: 35%;
 
   @media only screen and (max-width: 680px){
-    margin-top: -5px;
+    transform: translateY(10px);
     width: 360px;
-    height: 5px;
+    height: 5 px;
   }
 `
 
@@ -112,4 +112,21 @@ export const Explanation = styled.h1`
   font-weight: 500;
   margin: 24px 0;
   color: lightgray;
+`
+
+export const IconsContainer = styled.div`
+  flex-direction: row;
+  color: #d0d9dc;
+  margin-top: 30px;
+
+  a:nth-child(1) {
+    margin-right: 5px;
+    svg {
+      color: #d0d9dc;
+    }
+  }
+
+  a:nth-child(2) {
+    margin-left: 5px;
+  }
 `
