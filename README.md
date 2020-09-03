@@ -1,5 +1,5 @@
 # Belford's law Applied to Coronavirus cases and deaths 🦩
-> Simple application made to see if coronavirus cases/deaths charts resemble Belford's law pattern ( Worldwide and on Brazil states )
+> Simple application made to see if coronavirus cases/deaths charts resemble Belford's law pattern <br/>( Worldwide and on Brazil states ) <br />
 > <br>The data was obtained from those two API's ([World covid API](https://api.covid19api.com/), 
 [Brazil covid API](https://covid19-brazil-api.now.sh/))<br>
 
@@ -26,5 +26,5 @@
 
 ## Result 🎨
 <p align="center">
-    <img width='30%' src="https://i.imgur.com/YAIF0LU.png">
+    <img width='28%' src="https://i.imgur.com/YAIF0LU.png">
 </p>
