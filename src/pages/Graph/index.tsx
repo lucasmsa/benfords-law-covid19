@@ -154,8 +154,14 @@ const Graph: React.FC = (props) => {
           
           <LineChart
             data={dataToGraph}
-            width={(windowWidth >= 650) ? 600 : 420}
-            height={(windowWidth >= 650) ? 400 : 296}
+            width={(windowWidth >= 650) 
+                    ? 600 
+                    : (windowWidth <= 400 
+                      ? 360 : 420)}
+            height={(windowWidth >= 650) 
+                    ? 400 
+                    : (windowWidth <= 400 
+                      ? 270 : 296)}
             style={{background: 'none'}}
             margin={{
               top: 5, right: 30, left: 20, bottom: 5,
@@ -164,7 +170,13 @@ const Graph: React.FC = (props) => {
             
             <CartesianGrid stroke='#000' fill='#a5bbad'/>
             <XAxis dataKey="name"  stroke='#000'/>
-            <YAxis stroke='#000' label={{ value: '1st digit ocurrences (%)', angle: -90, position: 'insideLeft', fontSize: '11'}}/>
+            <YAxis stroke='#000' 
+                  label={{ 
+                    value: '1st digit ocurrences (%)', 
+                    angle: -90, 
+                    position: 'insideLeft', 
+                    fontSize: `${((windowWidth/(40*(windowWidth/400 + 0.01))))}`
+                  }}/>
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="Benfords_law" stroke='#37515a' strokeDasharray="6" strokeWidth='6px'/>
