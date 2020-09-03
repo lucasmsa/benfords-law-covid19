@@ -70,6 +70,12 @@ export const Line = styled.div`
   color:  aliceblue;
   border-radius: 35%;
 
+  @media only screen and (max-width: 815px) and (min-width: 680px){
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+
   @media only screen and (max-width: 680px){
     transform: translateY(10px);
     width: 360px;
@@ -80,6 +86,7 @@ export const Line = styled.div`
     transform: translateY(-160px);
     width: 280px;
     margin-bottom: -100px;
+    padding-top: -100px;
   }
 `
 

@@ -23,7 +23,7 @@ const Home: React.FC = () => {
         Benford's Law<br /> Covid-19
         <ImageVirus src={VirusImage} alt='Virus' />
       </Header> 
-      <Line />
+      <Line /> 
       <Explanation>
         Benford's law refers to a pattern observed in statiscal data
         in which the the distribution of the first digit is not homogeneous 
