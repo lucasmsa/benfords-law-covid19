@@ -71,9 +71,7 @@ export const Line = styled.div`
   border-radius: 35%;
 
   @media only screen and (max-width: 815px) and (min-width: 680px){
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 10px;
+    visibility: hidden;
   }
 
   @media only screen and (max-width: 680px){
