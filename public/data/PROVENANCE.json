@@ -1,0 +1,45 @@
+{
+  "fetchedAt": "2026-09-04T12:54:06.912Z",
+  "world": {
+    "source": "Johns Hopkins CSSE COVID-19 Data Repository",
+    "repo": "https://github.com/CSSEGISandData/COVID-19",
+    "files": [
+      "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv",
+      "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
+    ],
+    "commit": "4360e50239b4eb6b22f3a1759323748f36752177",
+    "commitDate": "2023-03-10T13:30:49Z",
+    "rawRows": {
+      "confirmed": 289,
+      "deaths": 289
+    },
+    "excludedRegions": [
+      "Diamond Princess",
+      "MS Zaandam",
+      "Summer Olympics 2020",
+      "Winter Olympics 2022"
+    ],
+    "aggregation": "Province/State rows summed into Country/Region; daily new = diff of cumulative",
+    "dates": 1143,
+    "firstDate": "2020-01-22",
+    "lastDate": "2023-03-09",
+    "regions": 197,
+    "gzipBytes": 392600
+  },
+  "brazil": {
+    "source": "wcota/covid19br, cases-brazil-states.csv",
+    "repo": "https://github.com/wcota/covid19br",
+    "files": [
+      "https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv"
+    ],
+    "commit": "3fc4c2196d2184c771f0f3aa0c1d6b58c9bd385c",
+    "commitDate": "2024-04-27T23:12:53Z",
+    "rawRows": 30842,
+    "aggregation": "rows with city == TOTAL and state != TOTAL; totalCases and deaths columns carried forward over missing dates; daily new = diff of cumulative",
+    "dates": 1118,
+    "firstDate": "2020-02-25",
+    "lastDate": "2023-03-18",
+    "regions": 27,
+    "gzipBytes": 77712
+  }
+}
