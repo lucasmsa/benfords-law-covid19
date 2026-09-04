@@ -1,9 +1,9 @@
 .idea/
 .vscode/
 node_modules/
-build/
-tmp/*
-temp/
+dist/
+tmp/
 .env
 .DS_Store
-!tmp/.gitkeep
+test-results/
+playwright-report/
