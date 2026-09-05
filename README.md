@@ -1,5 +1,7 @@
 # Benford's law × Covid-19 🦩
 
+**[benford.lucasmsa.com](https://benford.lucasmsa.com)**
+
 > Does the first digit of coronavirus counts follow Benford's law? A static page over a committed snapshot of the pandemic: 197 countries and 27 Brazilian states, daily and cumulative series, first and first-two digit tests, chi-square and MAD with Nigrini's conformity bands, and a plain-language explainer next to the chart.
 
 <p align="center">
@@ -75,4 +77,4 @@ Static build, no server, no environment variables.
 pnpm build        # dist/
 ```
 
-Vercel from the personal account: import the repo, framework preset Vite, build command `pnpm build`, output `dist`. Proposed domain: `benford.lucasmsa.com`, added under the project's Domains tab with a CNAME on `lucasmsa.com`. No rewrites are needed because the page has a single route.
+Live at [benford.lucasmsa.com](https://benford.lucasmsa.com), on Vercel: framework preset Vite, build command `pnpm build`, output `dist`. The domain is registered at Vercel with its nameservers, so the subdomain needed no DNS record of its own. No rewrites, because the page has a single route.
