@@ -14,6 +14,7 @@ export default function Footer({ provenance }: Props) {
         {provenance.world.commit.slice(0, 7)}, wcota commit {provenance.brazil.commit.slice(0, 7)}.
       </span>
       <nav className="footer__links" aria-label="Links">
+        <a href="https://lucasmsa.com" rel="author">by lucasmsa</a>
         <a href={citations.repo.url}>GitHub</a>
         <a href={citations.wikipedia.url}>Wikipedia</a>
       </nav>
